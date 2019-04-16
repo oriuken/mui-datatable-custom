@@ -167,7 +167,7 @@ class TableToolbar extends React.Component {
     return (
       <Toolbar className={classes.root} role={'toolbar'} aria-label={'Table Toolbar'}>
         <div className={classes.left}>
-          {showSearch === true ? (
+          {options.searchAlwaysVisible || showSearch === true ? (
             <TableSearch onSearch={this.handleSearch} onHide={this.hideSearch} options={options} />
           ) : typeof title !== 'string' ? (
             title
